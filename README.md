@@ -4,6 +4,7 @@
 
 <details>
 <summary> <b>Project Setup</b> </summary>
+<br>
 Start a new virtual environment:
 
 `> python -m venv .venv`
