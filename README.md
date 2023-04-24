@@ -2,8 +2,25 @@
 
 *All code snippets starting with `>` are commands to be executed in the terminal on the root directory.*
 
+<details>
+<summary> <b>Project Setup</b> </summary>
+Start a new virtual environment:
+
+`> python -m venv .venv`
+
+`> source .venv/bin/activate`
+
+Access the project directory:
+
+`> cd mysql`
+
+Install dependencies:
+
+`> pip install -r requirements.txt`
+
+</details>
+
 ## **Database Setup**
----
 
 The MySQL database is configured to be used in the `localhost` server, on port `3306`.
 
@@ -20,14 +37,13 @@ password = {user_password}
 default-character-set = utf8
 ```
 ## **Creating a new App**
----
 
 `> python3 manage.py startapp appname `
 
 This command will create a new app directory with the chosen app name.
 
 On `settings.py`: 
-- Add new App config to INSTALED_APPS
+- Add new App config to the `INSTALED_APPS` variable
   - `"appname.apps.AppnameConfig"`
   - Uppercase on app name
 - Define models for the app on `appname/models.py`
@@ -37,3 +53,13 @@ On `settings.py`:
 - `> python3 manage.py migrate`
 
 Now the models are created and migrated to the database.
+
+## **Updating Views**
+
+## **Setting up Tests**
+
+## **Custom Scripts**
+
+## **Admin Panel Config**
+
+## **Deployment**
