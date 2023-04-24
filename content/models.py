@@ -64,7 +64,7 @@ class BaseLecture(BaseContent):
         return str(str(self.module) + ' - ' + self.name)
 
 
-# TODO: Add specific icons for each lecture type
+# TODO: Add specific icons for each lecture type. Make it on frontend only?
 class VideoLecture(BaseLecture):
     video_url = models.URLField(null=True) # TODO: Choose proper video delivery method
 
@@ -81,6 +81,9 @@ class Question(BaseLecture):
     alt_c = models.CharField(max_length=50)
     alt_d = models.CharField(max_length=50)
 
+    # Helper text to be shown after the question is answered,
+    # explaining why each alternative is either right or wrong.
+    # However, implementation in optional
     helper_text_a = models.TextField(max_length=200, null=True, blank=True)
     helper_text_b = models.TextField(max_length=200, null=True, blank=True)
     helper_text_c = models.TextField(max_length=200, null=True, blank=True)
