@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -7,6 +8,8 @@ class Instructor(models.Model):
     country = models.CharField(max_length=30)
     email = models.EmailField(null=True, blank=True)
     bio = models.TextField(max_length=500, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name 
@@ -17,6 +20,8 @@ class BaseContent(models.Model):
     description = models.TextField(max_length=300, null=True, blank=True)
     visible = models.BooleanField(default=True)
     index = models.IntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         abstract = True

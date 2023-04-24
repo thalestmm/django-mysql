@@ -7,3 +7,4 @@ admin.site.register(Area)
 admin.site.register(Course)
 admin.site.register(Module)
 admin.site.register(VideoLecture)
+# TODO: Create and add the other types of lectures
