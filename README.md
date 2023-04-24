@@ -3,8 +3,10 @@
 *All code snippets starting with `>` are commands to be executed in the terminal on the root directory.*
 
 <details>
-<summary> <b>Project Setup</b> </summary>
-<br>
+<summary><b><font size=4>Project Setup</font></b> </summary>
+
+*These are basic orientations for starting a new Python project.*
+
 Start a new virtual environment:
 
 `> python -m venv .venv`
@@ -20,6 +22,7 @@ Install dependencies:
 `> pip install -r requirements.txt`
 
 </details>
+<br>
 
 ## **Database Setup**
 
