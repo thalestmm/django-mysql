@@ -51,6 +51,7 @@ On `settings.py`:
 - Add the new App config to the `INSTALED_APPS` variable
   - `"appname.apps.AppnameConfig"`
     - Uppercase on app name
+    - This name can be altered by changing the class name on 'appname/apps.py`
 - Define models for the app on `appname/models.py`
 - Register models on `appname/admin.py`
   - This enables reading models and editing them on the admin panel
@@ -69,6 +70,7 @@ When developing an API, you'll probably only need to return `httpResponse` objec
 
 However, you can also render templates with any data you might want.
 
+After creating a new view on `appname/views.py`, you'll need to add the desired path to run the defined function. This is done by adding the path to the `appname/urls.py` file.
 
 ## **Setting up Tests**
 
