@@ -22,7 +22,6 @@ Install dependencies:
 `> pip install -r requirements.txt`
 
 </details>
-<br>
 
 ## **Database Setup**
 
