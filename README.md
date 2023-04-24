@@ -47,18 +47,27 @@ default-character-set = utf8
 This command will create a new app directory with the chosen app name.
 
 On `settings.py`: 
-- Add new App config to the `INSTALED_APPS` variable
+- Add the new App config to the `INSTALED_APPS` variable
   - `"appname.apps.AppnameConfig"`
-  - Uppercase on app name
+    - Uppercase on app name
 - Define models for the app on `appname/models.py`
 - Register models on `appname/admin.py`
   - This enables reading models and editing them on the admin panel
 - `> python3 manage.py makemigrations`
 - `> python3 manage.py migrate`
+- On the `mysql/urls.py` file, register the new path to the created app in the `urlpatterns` variable
+  -  `path("desired_path/", include("appname.urls")),`
 
 Now the models are created and migrated to the database.
 
 ## **Updating Views**
+
+The url to the views was already registered in the previous step. 
+
+When developing an API, you'll probably only need to return `httpResponse` objects in the `appname/views.py` file.
+
+However, you can also render templates with any data you might want.
+
 
 ## **Setting up Tests**
 
