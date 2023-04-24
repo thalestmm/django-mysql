@@ -59,6 +59,9 @@ class BaseLecture(BaseContent):
     class Meta:
         abstract = True
         ordering = ['module', 'index', 'name']
+    
+    def __str__(self):
+        return str(str(self.module) + ' - ' + self.name)
 
 
 # TODO: Add specific icons for each lecture type
@@ -70,6 +73,19 @@ class TextLecture(BaseLecture):
     pass
 
 
-# TODO: Add alternatives and explanations
 class Question(BaseLecture):
-    pass
+    question_text = models.TextField(max_length=500)
+
+    alt_a = models.CharField(max_length=50)
+    alt_b = models.CharField(max_length=50)
+    alt_c = models.CharField(max_length=50)
+    alt_d = models.CharField(max_length=50)
+
+    helper_text_a = models.TextField(max_length=200, null=True, blank=True)
+    helper_text_b = models.TextField(max_length=200, null=True, blank=True)
+    helper_text_c = models.TextField(max_length=200, null=True, blank=True)
+    helper_text_d = models.TextField(max_length=200, null=True, blank=True)
+
+    correct_alternative = models.CharField(max_length=1,
+                                           choices=[(value, value) for value in 'ABCD'],
+                                           default='A')
