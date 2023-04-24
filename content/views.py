@@ -11,4 +11,4 @@ def index(request):
     course_list = Course.objects.all()
     output = ", ".join([course.name for course in course_list])
 
-    return render(request, 'content/base.html')
+    return render(request, 'content/index.html')
