@@ -1,3 +1,5 @@
+[![author](https://img.shields.io/badge/author-thalestmm-red.svg)](https://www.linkedin.com/in/thales-m-meier-44593b17b)
+
 # **Django MySQL Template**
 
 *All code snippets starting with `>` are commands to be executed in the terminal on the root directory.*
