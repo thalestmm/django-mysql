@@ -1,1 +1,1 @@
-# Django MySQL template
+# Django MySQL Template
