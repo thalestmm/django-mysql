@@ -7,4 +7,4 @@ from .models import Course, Area
 # Create your views here.
 
 def index(request):
-    pass
+    return HttpResponse("Content app")
