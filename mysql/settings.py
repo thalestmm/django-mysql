@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_browser_reload', # Hot reload
     # Created apps
-    'content.apps.ContentConfig',
+    'main', # App for normal utilities, such as home views
+    'content',
 ]
 
 MIDDLEWARE = [
